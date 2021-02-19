@@ -1,0 +1,36 @@
+{
+  "name": "Serial to TCP gateway",
+  "version": "dev",
+  "slug": "ser2tcp",
+  "description": "Connect to your serial devices via TCP",
+  "url": "https://github.com/altersis/pyserial",
+  "arch": ["aarch64", "amd64", "armhf", "armv7", "i386"],
+  "startup": "system",
+  "boot": "auto",
+  "hassio_api": true,
+  "hassio_role": "manager",
+  "homeassistant_api": true,
+  "auto_uart": true,
+  "ports": {
+    "7777/tcp": 7777
+  },
+  "ports_description": {
+    "7777/tcp": "Network port used to expose the serial port"
+  },
+  "options": {
+    "serial_port": "/dev/ttyUSB0",
+    "speed": "19200",
+    "parity": "N",
+    "data_bits": 8,
+    "ss_bits": 1
+  },
+  "schema": {
+    "log_level": "list(trace|debug|info|notice|warning|error|fatal)?",
+    "serial_port": "str",
+    "speed": "int",
+    "parity": "list(N|E|O|S|M)",
+    "data_bits": "list(5|6|7|8)",
+    "ss_bits": "list(1|1.5|2)",
+    "list_usb_devices": "bool?"
+  }
+}

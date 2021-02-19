@@ -1,0 +1,10 @@
+{
+  "build_from": {
+    "aarch64": "hassioaddons/base-python:latest",
+    "amd64": "hassioaddons/base-python:latest",
+    "armhf": "hassioaddons/base-python:latest",
+    "armv7": "hassioaddons/base-python:latest",
+    "i386": "hassioaddons/base-python:latest"
+  },
+  "args": {}
+}
